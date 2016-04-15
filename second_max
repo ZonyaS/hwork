@@ -1,0 +1,13 @@
+print("Ввод списка: ") 
+spisok = input().split() 
+for i in range(len(spisok)): 
+   spisok[i] = int(spisok[i]) 
+second_max = spisok[0]
+for j in range(len(spisok)):
+   if spisok[j] > second_max and spisok[j] < max(spisok):
+      second_max = spisok[j]
+if second_max != max(spisok):
+   print("Второй максимум списка: ")
+   print(second_max)
+else: 
+   print("Второго максимума нет.")
